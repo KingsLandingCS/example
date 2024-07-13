@@ -1,7 +1,8 @@
-<div [ngClass]="'text-white p-2 bg-success m-2' + getClasses()">
-  Hello, World.
-</div>
-<div class="form-group m-2">
-  <label>Name:</label>
-  <input class="form-control" [value]="model.getProduct(1)?.name ?? 'None'" />
+<div class="text-white">
+  <div [class]="getClasses(1)">
+    The first product is {{model.getProduct(1)?.name}}.
+  </div>
+  <div [class]="getClasses(2)">
+    The second product is {{model.getProduct(2)?.name}}
+  </div>
 </div>
